@@ -1,0 +1,74 @@
+{
+  "posts": [
+    {
+      "title": "sample title",
+      "body": "sample description. THIS WORKS TOO. :)",
+      "id": 1
+    },
+    {
+      "title": "Another title",
+      "body": "Another description. THIS WORKS AS WELL. ",
+      "id": 2
+    },
+    {
+      "title": "Third title",
+      "body": "Third description....",
+      "id": 3
+    },
+    {
+      "title": "Fourth title",
+      "body": "Fourth description",
+      "id": 4
+    },
+    {
+      "title": "Fifth title",
+      "body": "Fifth description. . .",
+      "id": 5
+    },
+    {
+      "title": "Fifth title",
+      "body": "Fifth description. . .",
+      "id": 6
+    },
+    {
+      "title": "Fifth title",
+      "body": "Fifth description. . .",
+      "id": 7
+    },
+    {
+      "title": "Nth title ",
+      "body": "lorem ipsum ... lorem FINALLY WORKS GO HOME ASAP",
+      "id": 8
+    },
+    {
+      "title": "Sample post",
+      "body": "Sample description...",
+      "id": 9
+    },
+    {
+      "title": "Another sample",
+      "body": "Another description",
+      "id": 10
+    },
+    {
+      "title": "sample",
+      "body": "SAMPLE DESCR. . .",
+      "id": 11
+    },
+    {
+      "title": "Sample title",
+      "body": "lorem ipsum ...",
+      "id": 12
+    },
+    {
+      "title": "Another one",
+      "body": "Khaled...",
+      "id": 13
+    },
+    {
+      "title": "Sample after refactor",
+      "body": "Component reuse. ",
+      "id": 14
+    }
+  ]
+}
