@@ -2,7 +2,7 @@
   "posts": [
     {
       "title": "sample title",
-      "body": "sample description. THIS WORKS TOO. :)",
+      "body": "sample description. THIS WORKS TOO. :) AGAIN SAMPLE",
       "id": 1
     },
     {
@@ -69,6 +69,26 @@
       "title": "Sample after refactor",
       "body": "Component reuse. ",
       "id": 14
+    },
+    {
+      "title": "Last Post",
+      "body": "Last post described below.  THIS WORKS PROPERLY. ",
+      "id": 15
+    },
+    {
+      "title": "Created stream",
+      "body": "A sample created stream",
+      "id": 16
+    },
+    {
+      "title": "Created stream",
+      "body": "A sample created stream",
+      "id": 17
+    },
+    {
+      "title": "I created a post",
+      "body": "Stream created :D",
+      "id": 18
     }
   ]
 }

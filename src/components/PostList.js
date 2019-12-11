@@ -15,7 +15,9 @@ class PostList extends React.Component{
                 <div className="item" key={post.id}>
                     <div className="content">
                         <div className="description">
-                            <h2>{post.title}</h2>
+                            <Link to={`/posts/${post.id}`} className='header'>
+                                <h2>{post.title}</h2>
+                            </Link>
                             <p>{post.body}</p>
                         </div>
                     </div>
@@ -26,10 +28,21 @@ class PostList extends React.Component{
         });
     }
 
+    renderCreate() {
+        return (
+            <div>
+                <Link to='/posts/new' className='ui button primary'>
+                    Create Post
+                </Link>
+            </div>
+        );
+    }
+
     render() {
         return (
                 <div>
                     <h1>List of Posts</h1>
+                    {this.renderCreate()}
                     <div className="ui celled list">{this.renderList()}</div>
                 </div>
             );
