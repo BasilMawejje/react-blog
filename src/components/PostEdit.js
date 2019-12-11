@@ -10,7 +10,7 @@ class PostEdit extends React.Component {
         this.props.fetchPost(this.props.match.params.id);
     }
 
-    onSubmit = (formValues) => {
+    onSubmit = formValues => {
         this.props.editPost(this.props.match.params.id, formValues);
     };
     

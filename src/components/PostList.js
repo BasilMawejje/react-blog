@@ -9,15 +9,21 @@ class PostList extends React.Component{
         this.props.fetchPosts();
     }
 
+    componentDidUpdate(prevProps) {
+        if (prevProps.posts !== this.props.posts) {
+          this.props.fetchPosts();
+        }
+      }
+
     renderList() {
         return this.props.posts.map( post => {
             return (
                 <div className="item" key={post.id}>
                     <div className="content">
-                        <div className="description">
                             <Link to={`/posts/${post.id}`} className='header'>
                                 <h2>{post.title}</h2>
                             </Link>
+                        <div className="description">
                             <p>{post.body}</p>
                         </div>
                     </div>

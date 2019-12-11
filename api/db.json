@@ -1,94 +1,19 @@
 {
   "posts": [
     {
-      "title": "sample title",
-      "body": "sample description. THIS WORKS TOO. :) AGAIN SAMPLE",
+      "title": "sample title @@@",
+      "body": "Please enter a description",
       "id": 1
     },
     {
       "title": "Another title",
-      "body": "Another description. THIS WORKS AS WELL. ",
+      "body": "Another description!!!",
       "id": 2
     },
     {
-      "title": "Third title",
-      "body": "Third description....",
+      "title": "I created this post. ",
+      "body": "This was made by me. . .",
       "id": 3
-    },
-    {
-      "title": "Fourth title",
-      "body": "Fourth description",
-      "id": 4
-    },
-    {
-      "title": "Fifth title",
-      "body": "Fifth description. . .",
-      "id": 5
-    },
-    {
-      "title": "Fifth title",
-      "body": "Fifth description. . .",
-      "id": 6
-    },
-    {
-      "title": "Fifth title",
-      "body": "Fifth description. . .",
-      "id": 7
-    },
-    {
-      "title": "Nth title ",
-      "body": "lorem ipsum ... lorem FINALLY WORKS GO HOME ASAP",
-      "id": 8
-    },
-    {
-      "title": "Sample post",
-      "body": "Sample description...",
-      "id": 9
-    },
-    {
-      "title": "Another sample",
-      "body": "Another description",
-      "id": 10
-    },
-    {
-      "title": "sample",
-      "body": "SAMPLE DESCR. . .",
-      "id": 11
-    },
-    {
-      "title": "Sample title",
-      "body": "lorem ipsum ...",
-      "id": 12
-    },
-    {
-      "title": "Another one",
-      "body": "Khaled...",
-      "id": 13
-    },
-    {
-      "title": "Sample after refactor",
-      "body": "Component reuse. ",
-      "id": 14
-    },
-    {
-      "title": "Last Post",
-      "body": "Last post described below.  THIS WORKS PROPERLY. ",
-      "id": 15
-    },
-    {
-      "title": "Created stream",
-      "body": "A sample created stream",
-      "id": 16
-    },
-    {
-      "title": "Created stream",
-      "body": "A sample created stream",
-      "id": 17
-    },
-    {
-      "title": "I created a post",
-      "body": "Stream created :D",
-      "id": 18
     }
   ]
 }

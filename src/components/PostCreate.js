@@ -5,7 +5,7 @@ import { createPost } from '../actions/index'
 import PostForm from './PostForm'
 
 class PostCreate extends React.Component {
-    onSubmit = (formValues) => {
+    onSubmit = formValues => {
         this.props.createPost(formValues);
     }
 
