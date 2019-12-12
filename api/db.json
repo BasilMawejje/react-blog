@@ -1,19 +1,14 @@
 {
   "posts": [
     {
-      "title": "sample title @@@",
-      "body": "Please enter a description",
+      "title": "sample title",
+      "body": "Please enter a description.",
       "id": 1
     },
     {
-      "title": "Another title",
-      "body": "Another description!!!",
+      "title": "Another Post",
+      "body": "Another description. THIS WORKS TOO!!!",
       "id": 2
-    },
-    {
-      "title": "I created this post. ",
-      "body": "This was made by me. . .",
-      "id": 3
     }
   ]
 }

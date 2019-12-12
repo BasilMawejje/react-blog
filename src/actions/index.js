@@ -31,6 +31,7 @@ export const editPost = (id, formValues) => async dispatch => {
     const response = jsonPlaceholder.patch(`/posts/${id}`, formValues);
 
     dispatch({ type: EDIT_POST, payload: response.data });
+    await dispatch(fetchPosts());
     history.push('/');
 };
 
