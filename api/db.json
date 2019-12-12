@@ -7,8 +7,13 @@
     },
     {
       "title": "Another Post",
-      "body": "Another description. THIS WORKS TOO!!!",
+      "body": "Another description. THIS WORKS TOO!!! YAAAYYYYYYY....",
       "id": 2
+    },
+    {
+      "title": "arr.map(&:description)",
+      "body": "Array map method with proc explained. ",
+      "id": 3
     }
   ]
 }

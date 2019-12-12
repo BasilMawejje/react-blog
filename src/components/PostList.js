@@ -9,20 +9,6 @@ class PostList extends React.Component{
         this.props.fetchPosts();
     }
 
-    // componentDidUpdate(prevProps) {
-    //     const { posts } = this.props;
-
-    //     if(prevProps.posts !== posts) {
-    //         this.props.fetchPosts();
-    //     }
-    // }
-
-    // componentWillReceiveProps(nextProps) {
-    //     if(nextProps) {
-    //         this.props.fetchPosts();
-    //     }
-    // }
-
     renderList() {
         return this.props.posts.map( post => {
             return (
