@@ -1,19 +1,24 @@
 {
   "posts": [
     {
-      "title": "sample title",
-      "body": "Please enter a description.",
+      "title": "arr.zip enumerable in exactly 5 minutes . . .",
+      "body": "Article on the array zip ruby enumerable. ",
       "id": 1
     },
     {
-      "title": "Another Post",
-      "body": "Another description. THIS WORKS TOO!!! YAAAYYYYYYY....",
+      "title": "Another Post Example. ",
+      "body": "Another description. THIS WORKS TOO!!! ...",
       "id": 2
     },
     {
       "title": "arr.map(&:description)",
       "body": "Array map method with proc explained. ",
       "id": 3
+    },
+    {
+      "title": "This now works 1234 1234 1234 ",
+      "body": "Sample description after refactor. ",
+      "id": 4
     }
   ]
 }

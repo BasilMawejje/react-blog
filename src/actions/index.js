@@ -10,7 +10,6 @@ import history from '../history'
 
 export const fetchPosts = () => async dispatch => {
     const response = await jsonPlaceholder.get('/posts');
-    
     dispatch({ type: FETCH_POSTS, payload: response.data });
 };
 
@@ -22,7 +21,7 @@ export const fetchPost = id => async dispatch => {
 
 export const createPost = formValues => async dispatch => {
     const response = await jsonPlaceholder.post('/posts', formValues);
-    
+
     dispatch({ type: CREATE_POST, payload: response.data });
     history.push('/');
 };
@@ -31,7 +30,7 @@ export const editPost = (id, formValues) => async dispatch => {
     const response = jsonPlaceholder.patch(`/posts/${id}`, formValues);
 
     dispatch({ type: EDIT_POST, payload: response.data });
-    await dispatch(fetchPosts());
+    await dispatch(fetchPost(id));
     history.push('/');
 };
 

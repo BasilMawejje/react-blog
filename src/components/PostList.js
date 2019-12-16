@@ -10,7 +10,7 @@ class PostList extends React.Component{
     }
 
     renderList() {
-        return this.props.posts.map( post => {
+        return this.props.posts.filter( post => post.id !== undefined).map( post => {
             return (
                 <div className="item" key={post.id}>
                     <div className="content">
