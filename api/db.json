@@ -6,7 +6,7 @@
       "id": 1
     },
     {
-      "title": "Another Post Example. ",
+      "title": "Another Post Example. . . EXAMPLE",
       "body": "Another description. THIS WORKS TOO!!! ...",
       "id": 2
     },
@@ -19,6 +19,21 @@
       "title": "This now works 1234 1234 1234 ",
       "body": "Sample description after refactor. ",
       "id": 4
+    },
+    {
+      "title": "Dummy post LOL",
+      "body": "Post that demonstrates that all the CRU functionality works. ",
+      "id": 5
+    },
+    {
+      "title": "Another Created Blog Post ",
+      "body": "Sample created blog post. . .",
+      "id": 6
+    },
+    {
+      "title": "Another Sample Post",
+      "body": "Sample post descr. . .",
+      "id": 7
     }
   ]
 }

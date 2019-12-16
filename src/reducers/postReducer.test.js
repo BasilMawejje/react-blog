@@ -12,6 +12,6 @@ describe('reduces posts', () => {
         type: FETCH_POSTS,
         payload: [{ id: 1, title: 'Some post', body: 'lorem ipsum ...' }]
       })
-    ).toEqual([{ id: 1, title: 'Some post', body: 'lorem ipsum ...' }])
+    ).toEqual({"1": {"body": "lorem ipsum ...", "id": 1, "title": "Some post"}})
   });
 });
