@@ -1,50 +1,33 @@
-import moxios from 'moxios'
-import thunk from 'redux-thunk'
-import configureMockStore from 'redux-mock-store'
-import { fetchPosts } from './index'
-import { FETCH_POSTS } from './types'
+import thunk from "redux-thunk";
+import MockAdapter from "axios-mock-adapter";
+import configureStore from "redux-mock-store";
 
-const middlewares = [thunk]
-const mockStore = configureMockStore(middlewares)
-let store
+import { fetchPosts } from "./index";
+import { FETCH_POSTS } from "./types";
+import { jsonPlaceholder } from "../apis/jsonPlaceholder";
 
-describe('fetchPosts action', () => {
+describe("Fetch posts", () => {
+  let httpMock;
+  let store;
   beforeEach(() => {
-    moxios.install()
-    store = mockStore({ posts: {} })
-  })
+    httpMock = new MockAdapter(jsonPlaceholder);
+    const mockStore = configureStore([thunk]);
+    store = mockStore({});
+  });
 
-  afterEach(() => {
-    moxios.uninstall()
-  })
-
-  it('fetches posts from an external api', () => {
-    const response = [
-      {
-          title: 'Sample title 1',
-          body: 'Sample post 1',
-          id: 1
-      },
-      {
-          title: 'Sample title 2',
-          body: 'Sample post 2',
-          id: 2
+  it("Should return all posts", () => {
+    const response = {
+      posts: {
+        id: 1,
+        title: "Sample title",
+        body: "Lorem ipsum. . ."
       }
-    ]
+    };
 
-  moxios.stubRequest('http://localhost:3001/posts', {
-    status: 200,
-    response: {
-      posts: response
-    }
-  })
-
-  const expectedActions = [
-    { type: FETCH_POSTS, payload: { posts: response } }
-    ]
-    store.dispatch(fetchPosts())
-    .then(() => {
-        expect(store.getActions()).toEqual(expectedActions)
-    })
-  })
-})
+    const expectedAction = [{ type: FETCH_POSTS, payload: response }];
+    httpMock.onGet("/posts").reply(200, response);
+    store.dispatch(fetchPosts()).then(() => {
+      expect(store.getActions()).toEqual(expectedAction);
+    });
+  });
+});
