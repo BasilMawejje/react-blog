@@ -44,8 +44,6 @@ describe("Fetch posts", () => {
     httpMock.onGet(`/posts/${response.posts.id}`).reply(200, response);
     store.dispatch(fetchPost(response.posts.id)).then(() => {
       expect(store.getActions()).toEqual(expectedAction);
-      console.log(store.getActions());
-      console.log(expectedAction);
     });
   });
 });
