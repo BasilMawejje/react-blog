@@ -69,4 +69,27 @@ describe("Fetch posts", () => {
         expect(store.getActions()).toEqual(expectedAction);
       });
   });
+
+  it("Should edit a post", () => {
+    const response = {
+      posts: {
+        id: 1,
+        title: "Edited title",
+        body: "Edited body"
+      }
+    };
+
+    const expectedAction = [{ type: EDIT_POST, payload: response.posts }];
+    httpMock
+      .onPatch(`posts/${response.posts.id}`)
+      .reply(204, { id: 1, title: "Edited title", body: "Edited body" });
+
+    store
+      .dispatch(
+        editPost(response.posts.id, { id: 1, title: "Edited title", body: "Edited body" })
+      )
+      .then(() => {
+        expect(store.getActions()).toEqual(expectedAction);
+      });
+  });
 });
