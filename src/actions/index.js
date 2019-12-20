@@ -27,10 +27,10 @@ export const createPost = formValues => async dispatch => {
 };
 
 export const editPost = (id, formValues) => async dispatch => {
-    const response = jsonPlaceholder.patch(`/posts/${id}`, formValues);
+    const response = await jsonPlaceholder.patch(`/posts/${id}`, formValues);
 
     dispatch({ type: EDIT_POST, payload: response.data });
-    await dispatch(fetchPost(id));
+    await fetchPost(id);
     history.push('/');
 };
 
