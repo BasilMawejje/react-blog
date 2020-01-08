@@ -15,13 +15,14 @@ const store = mockStore({posts:
 });
 
 describe('PostList', () => {
-    const wrapper = shallow(
-        <Provider store={store}>
-            <PostList />
-        </Provider>
-    );
-
     it('renders a list of items', () => {
+        const wrapper = shallow(
+            <Provider store={store}>
+                <PostList />
+            </Provider>
+        );
         
+        expect(wrapper.find(PostList)).toBeTruthy();
+        expect(wrapper.find(PostList)).toHaveLength(1);
     });
 })
