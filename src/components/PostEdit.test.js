@@ -6,6 +6,7 @@ import { Provider } from 'react-redux'
 import { shallowToJson } from 'enzyme-to-json';
 
 import PostEdit from './PostEdit'
+import PostForm from './PostForm'
 
 configure({ adapter: new Adapter() });
 
@@ -20,9 +21,11 @@ describe('PostEdit', () => {
     beforeEach(() => {
         wrapper = shallow(
             <Provider store={store}>
-                <PostEdit />
+                <PostEdit>
+                    <PostForm />
+                </PostEdit>
             </Provider>
-        );
+        ).dive();
     });
 
     it('renders properly', () => { 
