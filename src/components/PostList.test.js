@@ -3,6 +3,7 @@ import { configure, shallow } from 'enzyme'
 import Adapter from 'enzyme-adapter-react-16'
 import configureStore from 'redux-mock-store';
 import { Provider } from 'react-redux'
+import { shallowToJson } from 'enzyme-to-json';
 
 import PostList from './PostList'
 
@@ -15,6 +16,16 @@ const store = mockStore({posts:
 });
 
 describe('PostList', () => {
+    it('renders properly', () => {
+        const wrapper = shallow(
+            <Provider store={store}>
+                <PostList />
+            </Provider>
+        );
+        
+        expect(shallowToJson(wrapper)).toMatchSnapshot();
+    });
+
     it('renders a list of items', () => {
         const wrapper = shallow(
             <Provider store={store}>
