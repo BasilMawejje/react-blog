@@ -16,23 +16,21 @@ const store = mockStore({posts:
 });
 
 describe('PostList', () => {
-    it('renders properly', () => {
-        const wrapper = shallow(
+    let wrapper; 
+
+    beforeEach(() => {
+        wrapper = shallow(
             <Provider store={store}>
                 <PostList />
             </Provider>
         );
-        
+    });
+
+    it('renders properly', () => { 
         expect(shallowToJson(wrapper)).toMatchSnapshot();
     });
 
     it('renders a list of items', () => {
-        const wrapper = shallow(
-            <Provider store={store}>
-                <PostList />
-            </Provider>
-        );
-        
         expect(wrapper.find(PostList)).toBeTruthy();
         expect(wrapper.find(PostList)).toHaveLength(1);
     });
