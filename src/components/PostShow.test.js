@@ -22,7 +22,7 @@ describe('PostShow', () => {
             <Provider store={store}>
                 <PostShow />
             </Provider>
-        );
+        ).dive();
     });
 
     it('renders properly', () => { 

@@ -23,7 +23,7 @@ describe('PostList', () => {
             <Provider store={store}>
                 <PostList />
             </Provider>
-        );
+        ).dive();
     });
 
     it('renders properly', () => { 
