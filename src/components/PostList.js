@@ -21,7 +21,7 @@ class PostList extends React.Component{
     }
 
     onSearchSubmit = term => {
-        let filteredList = _.filter(this.props.posts, post => post.title.includes(term));
+        let filteredList = _.filter(this.props.posts, post => post.title.toLowerCase().includes(term) || post.title.toUpperCase().includes(term));
 
         this.setState({
             posts_list: filteredList
