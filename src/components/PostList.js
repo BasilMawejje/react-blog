@@ -1,16 +1,35 @@
 import React from 'react'
 import { connect } from 'react-redux'
 import { Link } from 'react-router-dom'
+import _ from 'lodash'
 
 import { fetchPosts } from '../actions'
+import SearchBar from './SearchBar'
 
 class PostList extends React.Component{
-    componentDidMount() {
-        this.props.fetchPosts();
+    constructor(props) {
+        super(props)
+
+        this.state = {
+            term: '',
+            posts_list: props.posts
+        }
     }
 
+    componentDidMount() {
+       this.props.fetchPosts();
+    }
+
+    onSearchSubmit = term => {
+        let filteredList = _.filter(this.props.posts, post => post.title.includes(term));
+
+        this.setState({
+            posts_list: filteredList
+        })
+    };
+
     renderList() {
-        return this.props.posts.filter( post => post.id !== undefined).map( post => {
+        return this.state.posts_list.map( post => {
             return (
                 <div className="item" key={post.id}>
                     <div className="content">
@@ -42,6 +61,7 @@ class PostList extends React.Component{
         return (
                 <div>
                     <h1>List of Posts</h1>
+                    <SearchBar onSubmit = {this.onSearchSubmit} />
                     {this.renderCreate()}
                     <div className="ui celled list">{this.renderList()}</div>
                 </div>
