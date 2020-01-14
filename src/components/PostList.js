@@ -8,7 +8,7 @@ import SearchBar from './SearchBar'
 class PostList extends React.Component{
     state = {
         term: '',
-        posts_list: [],
+        postsList: [],
     }
 
     componentDidMount() {
@@ -24,12 +24,12 @@ class PostList extends React.Component{
            return postData.indexOf(inputData) > -1;
         });
         
-        this.setState({ posts_list: filteredList });
+        this.setState({ postsList: filteredList });
       };
 
     renderList() {
-        if(this.state.posts_list.length === 0 || this.state.posts_list.length === this.props.posts.length - 1 
-            || (this.state.posts_list[0] === this.props.posts[0] && this.state.posts_list.length === 1) ) {
+        if(this.state.postsList.length === 0 || this.state.postsList.length === this.props.posts.length - 1 
+            || (this.state.postsList[0] === this.props.posts[0] && this.state.postsList.length === 1) ) {
             return this.props.posts.map( post => {
                 return (
                     <div className="item" key={post.id}>
@@ -48,8 +48,8 @@ class PostList extends React.Component{
             });
         }
 
-        if(this.state.posts_list.length > 0) {
-            return this.state.posts_list.map( post => {
+        if(this.state.postsList.length > 0) {
+            return this.state.postsList.map( post => {
                 return (
                     <div className="item" key={post.id}>
                         <div className="content">
