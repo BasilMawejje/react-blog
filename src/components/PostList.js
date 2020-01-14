@@ -6,13 +6,9 @@ import { fetchPosts } from '../actions'
 import SearchBar from './SearchBar'
 
 class PostList extends React.Component{
-    constructor(props) {
-        super(props)
-
-        this.state = {
-            term: '',
-            posts_list: [],
-        }
+    state = {
+        term: '',
+        posts_list: [],
     }
 
     componentDidMount() {
@@ -32,7 +28,8 @@ class PostList extends React.Component{
       };
 
     renderList() {
-        if(this.state.posts_list.length === 0 || this.state.posts_list.length === this.props.posts.length - 1) {
+        if(this.state.posts_list.length === 0 || this.state.posts_list.length === this.props.posts.length - 1 
+            || (this.state.posts_list[0] === this.props.posts[0] && this.state.posts_list.length === 1) ) {
             return this.props.posts.map( post => {
                 return (
                     <div className="item" key={post.id}>

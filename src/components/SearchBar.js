@@ -1,7 +1,4 @@
 import React from 'react'
-import { connect } from 'react-redux'
-
-import { fetchPosts } from '../actions'
 
 class SearchBar extends React.Component {
     state = { 
@@ -30,8 +27,4 @@ class SearchBar extends React.Component {
     }
 }
 
-const mapStateToProps = state => {
-    return { posts: Object.values(state.posts) }
-}
-
-export default connect(mapStateToProps, { fetchPosts })(SearchBar);
+export default SearchBar;
