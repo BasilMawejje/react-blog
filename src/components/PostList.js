@@ -21,8 +21,8 @@ class PostList extends React.Component{
 
     onSearchSubmit = term => {
         const filteredList = this.props.posts.filter(post => {      
-          const postData = `${post.title.toUpperCase()}   
-          ${post.body.toUpperCase()}`;
+          const postData = `${post.title.toUpperCase().replace(/[0-9]/g, '')}   
+          ${post.body.toUpperCase().replace(/[0-9]/g, '')}`;
           
            const inputData = term.toUpperCase();
            return postData.indexOf(inputData) > -1;
@@ -32,7 +32,7 @@ class PostList extends React.Component{
       };
 
     renderList() {
-        if(this.state.posts_list.length === 0) {
+        if(this.state.posts_list.length === 0 || this.state.posts_list.length === this.props.posts.length - 1) {
             return this.props.posts.map( post => {
                 return (
                     <div className="item" key={post.id}>
@@ -85,7 +85,7 @@ class PostList extends React.Component{
         return (
                 <div>
                     <h1>List of Posts</h1>
-                    <SearchBar onSubmit = {this.onSearchSubmit} />
+                    <SearchBar onChange = {this.onSearchSubmit} />
                     {this.renderCreate()}
                     <div className="ui celled list">{this.renderList()}</div>
                 </div>
