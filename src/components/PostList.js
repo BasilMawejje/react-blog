@@ -28,9 +28,12 @@ class PostList extends React.Component{
       };
 
     renderList() {
-        if(this.state.postsList.length === 0 || this.state.postsList.length === this.props.posts.length - 1 
-            || (this.state.postsList[0] === this.props.posts[0] && this.state.postsList.length === 1) ) {
-            return this.props.posts.map( post => {
+        const { postsList } = this.state;
+        const { posts } = this.props;
+
+        if(postsList.length === 0 || postsList.length === posts.length - 1 || 
+            (postsList[0] === posts[0] && postsList.length === 1) ) {
+            return posts.map( post => {
                 return (
                     <div className="item" key={post.id}>
                         <div className="content">
@@ -48,8 +51,8 @@ class PostList extends React.Component{
             });
         }
 
-        if(this.state.postsList.length > 0) {
-            return this.state.postsList.map( post => {
+        if(postsList.length > 0) {
+            return postsList.map( post => {
                 return (
                     <div className="item" key={post.id}>
                         <div className="content">
