@@ -24,6 +24,11 @@
       "title": "Dummy post LOL",
       "body": "Post that demonstrates that all the CRU functionality works. ",
       "id": 5
+    },
+    {
+      "title": "Delete me PLEASE @@@",
+      "body": "Delete me . . .",
+      "id": 6
     }
   ]
 }
